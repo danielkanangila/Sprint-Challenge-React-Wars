@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import './App.css';
 
+const API_URL = 'https://swapi.co/api/people/';
+
 const App = () => {
+  const [people, setPeople] = useState({});
+
+  useEffect(() => {
+    axios.get(API_URL).then(res => {
+      setPeople(res.data);
+    }).catch(err => console.error(err));
+  }, []);
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
