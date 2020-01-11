@@ -5,15 +5,16 @@ import './App.css';
 import Navbar from './components/Navbar';
 import { Container } from '@material-ui/core';
 import Header from './components/Header';
+import PeopleCards from './components/Peoples/PeopleCards';
 
 const API_URL = 'https://swapi.co/api/people/';
 
 const App = () => {
-  const [people, setPeople] = useState({});
+  const [data, setData] = useState({});
 
   useEffect(() => {
     axios.get(API_URL).then(res => {
-      setPeople(res.data);
+      setData(res.data);
     }).catch(err => console.error(err));
   }, []);
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -28,7 +29,7 @@ const App = () => {
       <Navbar />
       <Header />
       <Container>
-
+        <PeopleCards people={data?.results} />
       </Container>
     </div>
   );
