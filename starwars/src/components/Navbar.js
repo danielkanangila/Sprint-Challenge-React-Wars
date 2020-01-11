@@ -31,7 +31,7 @@ export default function SearchAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar className={classes.appBar} position="static">
+      <AppBar className={classes.appBar} position="fixed">
         <Container>
           <Toolbar>
             <IconButton
