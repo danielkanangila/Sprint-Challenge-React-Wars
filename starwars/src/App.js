@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import { Container } from '@material-ui/core';
 import Header from './components/Header';
 import PeopleCards from './components/Peoples/PeopleCards';
+import Footer from './components/Footer';
 
 const API_URL = 'https://swapi.co/api/people/';
 
@@ -16,6 +17,12 @@ const App = () => {
     axios.get(API_URL).then(res => {
       setData(res.data);
     }).catch(err => console.error(err));
+
+    // window.onscroll = e => {
+    //   if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+    //     console.log('Hit bottom');
+    //   }
+    // }
   }, []);
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
@@ -31,6 +38,7 @@ const App = () => {
       <Container>
         <PeopleCards people={data?.results} />
       </Container>
+      <Footer />
     </div>
   );
 }

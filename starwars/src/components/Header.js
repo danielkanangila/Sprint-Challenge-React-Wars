@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
         zIndex: 10,
         marginRight: theme.spacing(2),
         marginLeft: 0,
-        width: '100%',
+        width: 200,
         [theme.breakpoints.up('sm')]: {
           marginLeft: theme.spacing(3),
           width: 'auto',
@@ -38,7 +38,7 @@ const useStyles = makeStyles(theme => ({
       inputInput: {
         padding: theme.spacing(1, 1, 1, 7),
         transition: theme.transitions.create('width'),
-        width: '100%',
+        width: 200,
         [theme.breakpoints.up('md')]: {
           width: 200,
         },
@@ -50,7 +50,7 @@ const Div = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 250px;
+    height: 300px;
     display: flex;
     justify-content: center;
     flex-direction: column;
