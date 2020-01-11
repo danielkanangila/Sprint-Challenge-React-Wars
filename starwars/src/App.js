@@ -27,6 +27,7 @@ const App = () => {
 
       axios.get(URL).then(res => {
         setData(res.data);
+        setCurrentCount(res.data.results.length);
       }).catch(err => console.error(err));
   }
   /** Pagination:
