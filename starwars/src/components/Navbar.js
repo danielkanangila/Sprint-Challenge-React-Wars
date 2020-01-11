@@ -20,6 +20,10 @@ const useStyles = makeStyles(theme => ({
       display: 'block',
     },
   },
+  appBar: {
+    backgroundColor: '#fff',
+    color: '#000'
+  }
 }));
 
 export default function SearchAppBar() {
@@ -27,7 +31,7 @@ export default function SearchAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar className={classes.appBar} position="static">
         <Container>
           <Toolbar>
             <IconButton
