@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
 
+import Navbar from './components/Navbar';
+
 const API_URL = 'https://swapi.co/api/people/';
 
 const App = () => {
@@ -21,7 +23,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="Header">React Wars</h1>
+      <Navbar />
     </div>
   );
 }
