@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
 
 const CharacterCountDisplay = props => {
     const classes = useStyles();
-    const { count } = props;
+    const { count, currentCount } = props;
 
     return (
         <Card className={classes.card}>
@@ -31,7 +31,7 @@ const CharacterCountDisplay = props => {
                 List of Star Wars Peoples
             </Typography>
             <Typography className={classes.count} component="p">
-                Number of Character: {count}
+                Number of Character: {currentCount} / {count}
             </Typography>
         </Card>
     );

@@ -15,7 +15,7 @@ const PeopleCards = props => {
 
     return(
         <Div>
-            <CharacterCountDisplay count={props?.count} />
+            <CharacterCountDisplay currentCount={props?.currentCount} count={props?.count} />
             {people?.map((person, index) => <PeopleCard key={index} {...person} />)}
         </Div>
     )
