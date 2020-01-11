@@ -19,7 +19,13 @@ const App = () => {
     }).catch(err => console.error(err));
   }, []);
 
-  
+  const search = (event) => {
+      const URL = `https://swapi.co/api/people/?search=${event.target.value}`;
+
+      axios.get(URL).then(res => {
+        setData(res.data);
+      }).catch(err => console.error(err));
+  }
 
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
@@ -31,7 +37,7 @@ const App = () => {
   return (
     <div className="App">
       <Navbar />
-      <Header />
+      <Header handleChange={ search } />
       <Container>
         <PeopleCards people={data?.results} />
       </Container>

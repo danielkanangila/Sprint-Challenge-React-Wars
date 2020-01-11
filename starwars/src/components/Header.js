@@ -91,6 +91,7 @@ const Header = props => {
               <SearchIcon />
             </div>
             <InputBase
+              onChange={ props?.handleChange }
               placeholder="Search…"
               classes={{
                 root: classes.inputRoot,
