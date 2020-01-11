@@ -39,7 +39,7 @@ const App = () => {
       <Navbar />
       <Header handleChange={ search } />
       <Container>
-        <PeopleCards people={data?.results} />
+        <PeopleCards count={data?.count} people={data?.results} />
       </Container>
       <Footer />
     </div>

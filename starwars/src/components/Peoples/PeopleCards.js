@@ -1,6 +1,7 @@
 import React from 'react';
 import PeopleCard from './PeopleCard';
 import styled from 'styled-components';
+import CharacterCountDisplay from './CharacterCountDisplay';
 
 const Div = styled.div`
     display: flex;
@@ -14,6 +15,7 @@ const PeopleCards = props => {
 
     return(
         <Div>
+            <CharacterCountDisplay count={props?.count} />
             {people?.map((person, index) => <PeopleCard key={index} {...person} />)}
         </Div>
     )
