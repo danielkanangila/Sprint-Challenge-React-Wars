@@ -3,6 +3,8 @@ import axios from 'axios';
 import './App.css';
 
 import Navbar from './components/Navbar';
+import { Container } from '@material-ui/core';
+import Header from './components/Header';
 
 const API_URL = 'https://swapi.co/api/people/';
 
@@ -24,6 +26,10 @@ const App = () => {
   return (
     <div className="App">
       <Navbar />
+      <Header />
+      <Container>
+
+      </Container>
     </div>
   );
 }
