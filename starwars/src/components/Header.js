@@ -57,6 +57,10 @@ const Div = styled.div`
     align-items: center;
     text-align: center;
     position: relative;
+
+    @media (min-width: 1024px) {
+        height: 350px;
+    }
 `
 
 const DivFilter = styled.div`
