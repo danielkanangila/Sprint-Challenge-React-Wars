@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography } from '@material-ui/core';
 
@@ -8,10 +7,7 @@ const useStyles = makeStyles(theme => ({
     logo: {
         fontFamily: 'Alfa Slab One',
         flexGrow: 1,
-        display: 'none',
-        [theme.breakpoints.up('sm')]: {
-            display: 'block',
-        },
+        display: 'block',
         fontWeight: 900,
         fontSize: '1.5rem'
     },

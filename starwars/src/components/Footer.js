@@ -24,7 +24,7 @@ const Footer = () => {
     return(
         <FooterWrapper>
             <H2>Start War Legends</H2>
-            <P>By ReactWars Copyright &copy; 2020</P>
+            <P>By ReactWars - Copyright &copy; 2020</P>
         </FooterWrapper>
     )
 }

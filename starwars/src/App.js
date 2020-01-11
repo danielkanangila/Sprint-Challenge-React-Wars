@@ -17,13 +17,10 @@ const App = () => {
     axios.get(API_URL).then(res => {
       setData(res.data);
     }).catch(err => console.error(err));
-
-    // window.onscroll = e => {
-    //   if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-    //     console.log('Hit bottom');
-    //   }
-    // }
   }, []);
+
+  
+
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
